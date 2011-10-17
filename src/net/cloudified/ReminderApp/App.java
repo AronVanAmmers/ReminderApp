@@ -1,4 +1,4 @@
-package net.cloudified.HelloCloudStorage;
+package net.cloudified.ReminderApp;
 
 import com.phonegap.*;
 import android.os.Bundle;
