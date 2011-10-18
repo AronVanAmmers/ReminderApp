@@ -1,5 +1,5 @@
 // Some configuration.
-var serviceUrls = ["http://restserver.cloudified.net"];
+var serviceUrls = ["http://restserver.cloudified.localhost"];
 
 // Initialize jo.
 jo.load();
