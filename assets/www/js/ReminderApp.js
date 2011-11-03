@@ -165,8 +165,6 @@ function saveToCloudStorage()
 	$.post(getServiceUrl(pref.getProperty("UserName")), JSON.stringify(reminderData))
 	.success(function(data){
 		//scn.alert("Successfully saved.")
-		// Reload to get the ID's of newly added items.
-		loadFromCloudStorage();		
 		})
 	.error(function(){ scn.alert("An error occurred", "Sorry, an error occurred while saving data.") });
 	
@@ -201,7 +199,7 @@ function getRandomTitle()
 
 function addRandomItem()
 {
-	randomItem = { Title: getRandomTitle(), Location: getRandomLocation() };
+	randomItem = { Title: getRandomTitle(), Location: getRandomLocation(), ID: $.Guid.New() };
 	reminderData.push(randomItem);
 	reload();
 }
